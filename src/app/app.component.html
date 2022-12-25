@@ -1,0 +1,24 @@
+<h1>Google Maps Javascript Lazy Loading</h1>
+
+<div class="content" role="main">
+
+  <!-- Highlight Card -->
+  <div>
+    <span>{{ title }} app is running!</span>
+  </div>
+Start
+  <div *ngIf="apiLoaded | async">
+    <google-map height="400px"
+      width="750px"
+      [center]="center"
+      [zoom]="zoom"
+      (mapClick)="moveMap($event)"
+      (mapMousemove)="move($event)">
+    </google-map>
+  </div>
+<div>Latitude: {{display.lat}}</div>
+<div>Longitude: {{display.lng}}</div>
+Stop
+</div>
+
+
